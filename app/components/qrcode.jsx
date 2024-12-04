@@ -41,9 +41,9 @@ const QRGenerator = () => {
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen bg-black">
-      <h1 className="pb-10 font-bold text-white text-7xl">QR Code Generator</h1>
+      <h1 className="pb-10 font-bold text-center text-white text-7xl max-sm:text-4xl">QR Code Generator</h1>
 
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center max-sm:flex-col">
         <input
           type="text"
           placeholder="Enter text or URL"
