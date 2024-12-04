@@ -6,7 +6,7 @@ import QRCode from "qrcode";
 const QRGenerator = () => {
   const [qrData, setQrData] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  const [hydrate, setHydrate] = useState(true)
+  const [hydrate, setHydrate] = useState(true);
   const canvasRef = useRef(null);
 
   const generateQRCode = async () => {
@@ -31,17 +31,19 @@ const QRGenerator = () => {
     }
   };
 
-  useEffect(()=>{
-     setHydrate(false)
-  }, [])
+  useEffect(() => {
+    setHydrate(false);
+  }, []);
 
-  if(hydrate){
-   return null;
+  if (hydrate) {
+    return null;
   }
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen bg-black">
-      <h1 className="pb-10 font-bold text-center text-white text-7xl max-sm:text-4xl">QR Code Generator</h1>
+      <h1 className="pb-10 font-bold text-center text-white text-7xl max-sm:text-4xl">
+        QR Code Generator
+      </h1>
 
       <div className="flex items-center justify-center max-sm:flex-col">
         <input
@@ -68,7 +70,7 @@ const QRGenerator = () => {
         {imageUrl && (
           <a
             href={imageUrl}
-            download="qrcode.png"
+            download={`${qrData.replace(/[^a-zA-Z0-9]/g, "_")}`}
             style={{
               display: "inline-block",
               marginTop: "20px",
