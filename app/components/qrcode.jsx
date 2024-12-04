@@ -49,7 +49,7 @@ const QRGenerator = () => {
           placeholder="Enter text or URL"
           value={qrData}
           onChange={(e) => setQrData(e.target.value)}
-          className="px-5 py-3 mr-2 rounded-3xl w-80"
+          className="px-5 py-3 mr-2 text-black rounded-3xl w-80"
         />
         <br />
         <button
